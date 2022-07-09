@@ -1,0 +1,760 @@
+{
+	// Place your snippets for cpp here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	// main snippets
+
+    "competitive programming 1": {
+		"prefix": "cp1",
+		"body": [
+			"#include <bits/stdc++.h>",
+            "#define ll long long",
+            "using namespace std;",
+            "",
+            "",
+            "void solve(){",
+            "    ",
+            "}",
+            "",
+            "int main(){",
+            "    #ifndef ONLINE_JUDGE",
+            "        freopen(\"input.txt\",\"r\",stdin);",
+            "        freopen(\"output.txt\",\"w\",stdout);",
+            "    #endif",
+            "",
+            "    ios_base::sync_with_stdio(false); cin.tie(NULL);",
+            "    ll T;",
+            "    cin >> T;",
+            "    while(T--){",
+            "        solve();",
+            "    }",
+            "    return 0;",
+            "}"
+		],
+		"description": ""
+	},
+
+    "competitive programming 2": {
+		"prefix": "cp2",
+		"body": [
+			"#include <bits/stdc++.h>",
+            "#define ll long long",
+            "using namespace std;",
+            "",
+            "",
+            "int main()",
+            "{",
+            "    #ifndef ONLINE_JUDGE",
+            "        freopen(\"input.txt\",\"r\",stdin);",
+            "        freopen(\"output.txt\",\"w\",stdout);",
+            "    #endif",
+            "",
+            "    ios_base::sync_with_stdio(false); cin.tie(NULL);",
+            "    ",
+            "    ",
+            "",
+            "return 0;",
+            "}"
+		],
+		"description": ""
+	},
+
+	"Competitive programming 3": {
+		"prefix": "cp3",
+		"body": [
+			"#include <bits/stdc++.h>",
+			"#define ll long long",
+			"using namespace std;",
+			"",
+			"void solve(){",
+			"",
+			"}",
+			"",
+			"int main()",
+			"{",
+			"    #ifndef ONLINE_JUDGE",
+			"        freopen(\"input.txt\",\"r\",stdin);",
+			"        freopen(\"output.txt\",\"w\",stdout);",
+			"    #endif",
+			"",
+			"    ios_base::sync_with_stdio(false); cin.tie(NULL);",
+			"    ll T = 1;",
+			"    cin >> T;",
+			"    for(ll tt = 0; tt < T; tt++){",
+			"        solve();",
+			"    }",
+			"return 0;",
+			"}"
+		],
+		"description": ""
+	},
+
+	// basic utility snippets
+    "policy based data structures":{
+		"prefix": "include_1",
+		"body": [
+			"#include <bits/stdc++.h>",
+			"#include <ext/pb_ds/assoc_container.hpp>",
+			"#include <ext/pb_ds/tree_policy.hpp>",
+			"#define ll long long",
+			"",
+			"using namespace std;",
+			"using namespace __gnu_pbds;",
+			"",
+			"",
+			"template <typename num_t> ",
+			"using ordered_set = tree<num_t, null_type, less_equal<num_t>, rb_tree_tag, tree_order_statistics_node_update>;",
+			""
+		],
+        "description": "pbds include code"
+	},
+
+    "local debug include":{
+        "prefix": "include_2",
+        "body": [
+            "#ifndef MEET_local_debug",
+            "#include \"local_debug_library.h\"",
+            "#endif"
+        ],
+        "description": "local debug library include"
+    },
+
+    "Constant Powers":{
+        "prefix": "tpower",
+        "body": [
+            "const ll M = (ll)3e5+7;",
+            "const ll INF = (ll)1e18+7;",
+        ]
+    },
+
+    "Online Judge": {
+		"prefix": "online_judge",
+		"body": [
+			"#ifndef ONLINE_JUDGE",
+			"    freopen(\"input.txt\",\"r\",stdin);",
+			"    freopen(\"output.txt\",\"w\",stdout);",
+			"#endif",
+		],
+		"description": ""
+	},
+
+    "test case":{
+        "prefix": "testcase",
+        "body": [
+            "ll T;",
+            "cin >> T;",
+            "while(T--){",
+            "    ",
+            "}",
+        ]
+    },
+
+
+    "Kick Start Test Case":{
+        "prefix":"testcase_google",
+        "body": [
+            "ll T;",
+            "cin >> T;",
+            "for(ll tt = 1; tt <= T; tt++){",
+            "    cout << \"Case #\" << tt << \": \";",
+            "    solve();",
+            "}"
+        ]
+    },
+
+
+
+	// C++ programming functions & Implementation & STL customization
+
+	"Functinon for user input array": {
+		"prefix": "user_in_n",
+		"body": [
+			"ll n ;",
+			"cin >> n;",
+			"vector <ll> a(n);",
+			"for(ll i = 0; i < n; i++){",
+			"    cin >> a[i];",
+			"}",
+			""
+		]
+	},
+
+	"Tree Input":{
+		"prefix": "tree_in_n",
+		"body": [
+			"for(ll i = 0; i < n-1; i++){",
+			"    ll u,v;",
+			"    cin >> u >> v;",
+			"    --u; --v;",
+			"    a[u].push_back(v);",
+			"    a[v].push_back(u);",
+			"}"
+		]
+	}
+	,
+
+	"function to print vector": {
+		"prefix": "print_vector",
+		"body": [
+			"for(auto i: $1) cout << i << \" \";",
+			"cout << endl;"
+		]
+	},
+
+	"matrix iteration":{
+		"prefix": "matrix_iteration",
+		"body": [
+			"for(ll i = 0; i < n; i++){",
+            "    for(ll j = 0; j < m; j++){",
+			"     ",
+			"    }",
+			"}"
+		]
+	},
+
+	"custom compare (vector,set)": {
+		"prefix": "Custom_compare",
+		"body": [
+			"bool custom_compare(pair <ll,ll> a, pair <ll,ll> b){",
+			"    return a.second < b.second;",
+			"}",
+		]
+	},
+	"custom compare (Priority queue)": {
+		"prefix": "Custom_compare_priority_queue",
+		"body": [
+			"class compare{",
+			"    public:",
+			"    bool operator () ( , ){",
+			"    ",
+			"    }",
+			"};",
+		]
+	},
+
+
+    // ADVANCED DATA STRUCTURES
+
+	"Disjoint Set Union":{
+		"prefix": "dsu_class",
+		"body":[
+			"class DSU{",
+			"    public:",
+			"    ll n;",
+			"    vector <ll> parent,deg;",
+			"",
+			"    DSU(ll sz){",
+			"        n = sz;",
+			"        parent = vector <ll> (n);",
+			"        deg = vector <ll> (n,1);",
+			"        iota(parent.begin(),parent.end(),0);",
+			"    }",
+			"",
+			"    ll get_parent(ll x){",
+			"        if(x == parent[x]){",
+			"            return x;",
+			"        }",
+			"        return parent[x] = get_parent(parent[x]);",
+			"    }",
+			"",
+			"    bool union_set(ll a, ll b){",
+			"        a = get_parent(a);",
+			"        b = get_parent(b);",
+			"",
+			"        if(a != b){",
+			"            if(deg[a] < deg[b])",
+			"                swap(a, b);",
+			"",
+			"            parent[b] = a;",
+			"            deg[a] += deg[b];",
+			"            deg[b] = 1;",
+			"            return true;",
+			"        }",
+			"        return false;",
+			"    }",
+			"};"
+		]
+	},
+
+    "Sparse Table":{
+        "prefix": "sparce_table",
+        "body": [
+            "class SparseTable{",
+            "    public:",
+            "",
+            "    ll N, K = 19;",
+            "    vector <ll> lg;",
+            "    vector <vector<ll>> st;",
+            "",
+            "    SparseTable(vector <ll> arr){",
+            "        N = arr.size();",
+            "        lg = vector <ll> (N+5);",
+            "        st = vector <vector<ll>> (N+5,vector <ll> (K+1));",
+            "",
+            "        lg[1] = 0;",
+            "        for (int i = 2; i <= N; i++){",
+            "            lg[i] = lg[i/2] + 1;",
+            "        }",
+            "",
+            "        for (ll i = 0; i <= N; i++){",
+            "            st[i][0] = arr[i];",
+            "        }",
+            "",
+            "        for (ll j = 1; j <= K; j++){",
+            "            for (ll i = 0; i + (1LL << j) <= N; i++){",
+            "                st[i][j] = min(st[i][j-1], st[i + (1LL << (j - 1))][j - 1]);",
+            "            }",
+            "        }",
+            "    }",
+            "",
+            "    ll query(ll L, ll R){",
+            "        ll j = lg[R - L + 1];",
+            "        ll result = min(st[L][j], st[R - (1 << j) + 1][j]);",
+            "        return result;",
+            "    }",
+            "",
+            "};",
+        ]
+    },
+
+    "Fenwick Tree for Sum":{
+        "prefix": "Fenwick Tree Sum",
+        "body": [
+            "class FenwickTree{",
+            "    public:",
+            "    ll N;",
+            "    vector <ll> bit;",
+            "",
+            "    FenwickTree(vector <ll> arr){",
+            "        N = arr.size();",
+            "        bit = vector <ll> (N+5);",
+            "        for(ll i = 0; i < N; i++){",
+            "            add(i,arr[i]);",
+            "        }",
+            "    }",
+            "",
+            "    void add(ll index, ll delta){",
+            "        ++index;",
+            "        while(index <= N){",
+            "            bit[index] += delta;",
+            "            index += index&-index;",
+            "        }",
+            "    }",
+            "",
+            "    ll query(ll R){",
+            "        ++R;",
+            "        ll result = 0;",
+            "        while(R > 0){",
+            "            result += bit[R];",
+            "            R -= R&-R;",
+            "        }",
+            "        return result;",
+            "    }",
+            "",
+            "    ll query(ll L, ll R){",
+            "        ll result = query(R) - query(L-1);",
+            "        return result;",
+            "    }",
+            "};"
+        ]
+    },
+
+    "Fenwick Tree for Minimum":{
+        "prefix": "Fenwick Tree Min",
+        "body": [
+            "class FenwickTree{",
+            "    public:",
+            "    vector <ll> bit;",
+            "    ll N, default_val = LLONG_MAX;",
+            "",
+            "    FenwickTree(vector <ll> arr){",
+            "        N = arr.size();",
+            "        bit = vector <ll> (N+5,default_val);",
+            "        for(ll i = 0; i < N; i++){",
+            "            update(i,arr[i]);",
+            "        }",
+            "    }",
+            "",
+            "    void update(ll index, ll value){",
+            "        while(index < N){",
+            "            bit[index] = min(bit[index], value);",
+            "            index = (index|(index+1));",
+            "        }",
+            "    }",
+            "",
+            "    ll query(ll R){",
+            "        ll result = default_val;",
+            "        while(R >= 0){",
+            "            result = min(result,bit[R]);",
+            "            R = (R&(R+1))-1;",
+            "        }",
+            "        return result;",
+            "    }",
+            "",
+            "};"
+        ]
+    },
+
+    "Segment Tree 1":{
+        "prefix": "segment_tree_1",
+        "body": [
+            "class SegmentTree{",
+            "    public:",
+            "    ll N = 1, default_value = 0;",
+            "    vector <ll> Tree;",
+            "",
+            "    ll operation(ll val1, ll val2){",
+            "        return val1 + val2;",
+            "    }",
+            "",
+            "    void build(vector <ll> A){",
+            "        while(N < A.size()) N *= 2;",
+            "        Tree = vector <ll> (2*N, default_value);",
+            "        for(ll i = 0; i < A.size(); i++){",
+            "            Tree[i+N] = A[i];",
+            "        }",
+            "        for(ll i = N-1; i >= 1; i--){",
+            "            Tree[i] = operation(Tree[2*i], Tree[2*i + 1]);",
+            "        }",
+            "    }",
+            "",
+            "    void update(ll index, ll value){",
+            "        index = index + N;",
+            "        Tree[index] = value;",
+            "        while(index >= 1){",
+            "            index /= 2;",
+            "            Tree[index] = operation(Tree[2*index], Tree[2*index+1]);",
+            "        }",
+            "    }",
+            "",
+            "    ll query(ll node, ll node_min, ll node_max, ll L, ll R){",
+            "        if(L > R || node_min > R || node_max < L){",
+            "            return default_value;",
+            "        }",
+            "        if(L <= node_min && node_max <= R){",
+            "            return Tree[node];",
+            "        }",
+            "",
+            "        ll mid = (node_min + node_max)/2;",
+            "        return operation( query(node*2, node_min ,mid, L, R),",
+            "                    query(node*2+1, mid+1, node_max, L, R));",
+            "    }",
+            "",
+            "    ll query(ll L, ll R){",
+            "        return query(1,0,N-1,L,R);",
+            "    }",
+            "};",
+        ]
+    },
+
+	// mathematical calculation pre written
+	"function for Modular Exponentiation": {
+		"prefix": "modExp",
+		"body": [
+            "const ll mod = (ll)1e9 + 7",
+			"",
+			"ll modExp(ll x, ll y){",
+			"    if(y == 0) return 1;",
+			"    else if(y == 1) return x;",
+			"",
+			"    ll half = modExp(x,y/2);",
+			"    if(y%2 == 0)",
+			"        return (half*half)%mod;",
+			"    else",
+			"        return (((half*x)%mod)*half)%mod;",
+			"}"
+		],
+		"description": ""
+	},
+
+
+	"NcR function Fast":{
+		"prefix": "Combination_NcR_1",
+		"body": [
+			"const ll N = 300500;",
+			"const ll mod = 1000000007;",
+
+			"ll fact[N];",
+			"ll invFact[N];",
+			// inbuilt mod exp here
+			"",
+			"ll modExp(ll x, ll y){",
+			"    if(y == 0) return 1;",
+			"    else if(y == 1) return x;",
+			"",
+			"    ll half = modExp(x,y/2);",
+			"    if(y%2 == 0)",
+			"        return (half*half)%mod;",
+			"    else",
+			"        return (((half*x)%mod)*half)%mod;",
+			"}",
+			"",
+			"ll NcR(ll n, ll r){",
+			"    if (r > n){",
+			"        return 0;",
+			"     }",
+			"    return fact[n] * invFact[r] % mod * invFact[n - r] % mod;",
+			"}",
+            "",
+            "void pre_compute(){",
+            "    fact[0] = invFact[0] = 1;",
+    		"    for (ll i = 1; i < N; i++) {",
+        	"        fact[i] = (fact[i - 1] * i) % mod;",
+        	"        invFact[i] = modExp(fact[i], mod - 2);",
+    		"    }",
+            "}"
+		]
+	},
+
+
+	"Prime Factorization":{
+		"prefix": "Prime_factorization_class",
+		"body": [
+			"class prime_factorization{",
+			"    public:",
+			"    vector <ll> primes;",
+			"",
+			"    prime_factorization(){",
+			"        ll N = (ll)1e6 + 7;",
+			"        vector <ll> prime(N, 1);",
+			"        prime[0] = prime[1] = 0;",
+			"",
+			"        for (ll i = 2; i < N; i++) {",
+			"            if(prime[i]) primes.push_back(i);",
+			"            if (prime[i] && i * i <= N) {",
+			"                for (ll j = i * i; j <= N; j += i){",
+			"                    prime[j] = 0;",
+			"                }",
+			"            }",
+			"        }",
+			"    }",
+			"",
+			"    vector <ll> get_factors(ll x){",
+			"        vector<ll> factors;",
+			"        for (ll i = 0; primes[i] * primes[i] <= x && i < primes.size(); i++){",
+			"            if (x % primes[i] == 0) {",
+			"                while (x % primes[i] == 0){",
+			"                    x /= primes[i];",
+			"                    factors.push_back(primes[i]);",
+			"                }",
+			"            }",
+			"        }",
+			"",
+			"        if (x > 1) {",
+			"            factors.push_back(x);",
+			"        }",
+			"        sort(factors.begin(), factors.end());",
+			"        return factors;",
+			"    }",
+			"};"
+		]
+	},
+
+    "Prime Factorization small":{
+        "prefix": "prime_factorization_small",
+        "body": [
+            "set <ll> prime_factors(ll x){",
+            "    set <ll> factors;",
+            "    for(ll i = 2; i*i <= x; i++){",
+            "        while(x%i == 0){",
+            "            factors.insert(i);",
+            "            x /= i;",
+            "        }",
+            "    }",
+            "    if(x > 1) factors.insert(x);",
+            "    ",
+            "    return factors;",
+            "}"
+        ]
+    },
+
+	"Sieve of Eratosthenes":{
+		"prefix": "sieve_of_er",
+		"body": [
+			"ll N = (ll)1e6 + 7;",
+			"vector <ll> prime(N, 1);",
+            "",
+            "void pre_compute(){",
+			"    prime[0] = prime[1] = 0;",
+			"    for (ll i = 2; i < N; i++) {",
+    		"        if (prime[i] && i * i <= N) {",
+        	"            for (ll j = i * i; j <= N; j += i){",
+            "                prime[j] = 0;",
+			"            }",
+    		"        }",
+			"    }",
+            "}"
+		]
+	},
+
+
+    // Algorithms
+
+    "Longest Palindromic Prefix":{
+        "prefix": "Longest_palindromic_prefix",
+        "body": [
+            "string LongestPalindromicPrefix(string s){",
+            "",
+            "    string t = s + '?';",
+            "",
+            "    reverse(s.begin(), s.end());",
+            "",
+            "    t += s;",
+            "",
+            "    ll n = t.length();",
+            "    ll ans[n]={0};",
+            "    for (ll i = 1; i < n; i++) {",
+            "        ll len = ans[i - 1];",
+            "        while (len > 0 && t[len] != t[i]) {",
+            "           len = ans[len - 1];",
+            "        }",
+            "        if (t[i] == t[len]){",
+            "            len++;",
+            "        }",
+            "        ans[i] = len;",
+            "    }",
+            "",
+            "    return t.substr(0, ans[n - 1]);",
+            "}",
+        ],
+        "description": "returns string Longest palindromic prefix of string"
+    },
+
+    "Z-Function of String":{
+        "prefix": "Longest_palindromic_prefix",
+        "body": [
+            "string LongestPalindromicPrefix(string s){",
+            "",
+            "    string t = s + '?';",
+            "",
+            "    reverse(s.begin(), s.end());",
+            "",
+            "    t += s;",
+            "",
+            "    ll n = t.length();",
+            "    ll ans[n]={0};",
+            "    for (ll i = 1; i < n; i++) {",
+            "        ll len = ans[i - 1];",
+            "        while (len > 0 && t[len] != t[i]) {",
+            "           len = ans[len - 1];",
+            "        }",
+            "        if (t[i] == t[len]){",
+            "            len++;",
+            "        }",
+            "        ans[i] = len;",
+            "    }",
+            "",
+            "    return t.substr(0, ans[n - 1]);",
+            "}",
+        ],
+        "description": "longest common prefix with string start at i"
+    },
+
+    "Longest Prefix is also Suffix":{
+        "prefix": "prefix_is_suffix",
+        "body": [
+            "ll largest_prefix_suffix(string s){",
+            "",
+            "    ll n = s.length();",
+            "    ll lps[n];",
+            "    lps[0] = 0;",
+            "    ll len = 0;",
+            "    ll i = 1;",
+            "    while (i < n)",
+            "    {",
+            "        if (s[i] == s[len]){",
+            "            len++;",
+            "            lps[i] = len;",
+            "            i++;",
+            "        }",
+            "        else{",
+            "",
+            "            if (len != 0){",
+            "                len = lps[len-1];",
+            "            }",
+            "            else{",
+            "                lps[i] = 0;",
+            "                i++;",
+            "            }",
+            "        }",
+            "    }",
+            "",
+            "    ll res = lps[n-1];",
+            "    return (res > n/2)? res/2 : res;",
+            "}"
+        ]
+    },
+
+    "Strongly connected component":{
+        "prefix": "strongly_connected",
+        "body": [
+
+            "const ll M = 1e5+7;",
+            "",
+            "ll n,m;",
+            "vector<ll> a[M], a_rev[M];",
+            "vector<bool> visited(M,false);",
+            "vector<ll> order, component;",
+            "",
+            "void DFS1(ll cr) {",
+            "    visited[cr] = true;",
+            "    ",
+            "    for (auto i: a[cr])",
+            "        if (!visited[i])",
+            "            DFS1(i);",
+            "",
+            "    order.push_back(cr);",
+            "}",
+            "",
+            "void DFS2(ll v) {",
+            "    visited[v] = true;",
+            "    component.push_back(v);",
+            "",
+            "    for (auto u : a_rev[v])",
+            "        if (!visited[u])",
+            "            DFS2(u);",
+            "}",
+            "",
+            "",
+            "void solve(){",
+            "    cin >> n >> m;",
+            "    for(ll i = 0; i < m; i++){",
+            "        ll u,v;",
+            "        cin >> u >> v;",
+            "        --u; --v;",
+            "        a[u].push_back(v);",
+            "        a_rev[v].push_back(u);",
+            "    }",
+            "",
+            "    for(ll i = 0; i < n; i++){",
+            "        if(!visited[i]) DFS1(i);",
+            "    }",
+            "",
+            "    fill(visited.begin(),visited.end(),false);",
+            "    reverse(order.begin(),order.end());",
+            "",
+            "    for(auto i: order){",
+            "        if(!visited[i]){",
+            "            DFS2(i);",
+            "",
+            "            // process each componenet here",
+            "",
+            "            component.clear();",
+            "        }",
+            "   }",
+            "}"
+        ]
+    }
+
+}
